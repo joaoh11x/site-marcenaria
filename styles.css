@@ -39,11 +39,17 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
+    flex-wrap: nowrap; /* Impede que os itens quebrem para a próxima linha */
+    justify-content: center; 
+    align-items: center;
     
 }
 
 nav ul li {
-    margin-left: 1rem;
+    margin: 0 10px;
+    min-width: 120px;
+    flex-grow: 1; /* Permite que os itens cresçam igualmente */
+    text-align: center; 
 }
 
 nav ul li a {
@@ -62,6 +68,9 @@ nav ul li a.destaque {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: #1c2844;
+    display: inline-block; /* Garante que o link se comporte como um bloco */
+    min-width: 150px; /* Define uma largura mínima para o botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
 }
 
 nav ul li a.destaque:hover {
@@ -387,6 +396,7 @@ footer {
     font-size: 1.5rem;
     color: #fff;
     z-index: 1001;
+    align-items: center;
 }
 
 .mobile-menu {
@@ -401,8 +411,8 @@ footer {
     }
 
     .nav-toggle {
-        display: block;
-        align-self: flex-end;
+        display: flex;
+        align-self: center;
         margin-top: -30px;
     }
 
@@ -600,4 +610,12 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.logo {
+    display: flex; /* Usar flexbox para centralizar */
+    align-items: center; /* Alinhar verticalmente */
+    justify-content: center; /* Centralizar horizontalmente */
+    text-align: center; /* Centralizar o texto */
+    width: 100%; /* Garantir que ocupe toda a largura */
 }
