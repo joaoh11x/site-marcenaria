@@ -36,6 +36,13 @@ nav {
     font-weight: bold;
 }
 
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -56,8 +63,10 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 1rem;
 }
+
 
 nav ul li a:hover {
     color: #f5cb67;
@@ -447,8 +456,18 @@ footer {
     .mobile-menu ul li a {
         color: #fff;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         display: block;
+    }
+    .mobile-menu ul li a:hover {
+        color: #f5cb67;
+        transform: scale(1.05);
+        transition: 0.3s ease;
+    }
+
+    .mobile-menu ul li a i{
+        margin-right: 10px;
+        color: #f5cb67;
     }
 
     .close-menu {
